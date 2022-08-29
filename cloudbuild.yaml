@@ -7,14 +7,14 @@ steps:
   args: 
   - 'build' 
   - '-t' 
-  - 'vonwig/altcservice:$TAG_NAME' 
+  - 'vonwig/altcservice:$BRANCH_NAME' 
   - '--build-arg' 
   - 'COMMIT_SHA=$COMMIT_SHA' 
   - '-f' 
   - 'Dockerfile' 
   - '.'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "vonwig/altcservice:$TAG_NAME"]
+  args: ["push", "vonwig/altcservice:$BRANCH_NAME"]
 availableSecrets:
    secretManager:
    - versionName: projects/personalsdm-216019/secrets/docker-password/versions/2
