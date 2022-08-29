@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :aliases
+ {:app {:exec-fn atomist.core/-main
+        :exec-args {:args ["go" 11]}}}}
