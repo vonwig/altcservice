@@ -1,4 +1,4 @@
-FROM clojure:tools-deps-focal
+FROM clojure:tools-deps-focal@sha256:841204b148d899c50f63a6e3bd1e12ce0a149091ea560d4cacfc467a4db9b881
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
